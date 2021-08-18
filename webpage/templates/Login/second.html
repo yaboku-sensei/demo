@@ -1,0 +1,14 @@
+{% extends "Login/main.html" %}
+  {% block title %}
+    Login
+    {% endblock %}
+    {% block body %}
+    <h1> S no. {{ login.firstName }}</h1>
+
+      <ul>
+  <li> Name : {{ login.firstName }} {{ login.lastName }} </li>
+  <li> Comment : {{ login.comment }}</li>
+  <li> detail: {{ detail }}
+      </ul>
+    <a href="{% url 'first' %}">Go Back</a>
+      {% endblock %}

@@ -1,0 +1,12 @@
+{% extends "Login/main.html" %}
+    {% block body %}
+    <h1> Hello, {{ user.fiest_name }}</h1>
+    <ul>
+      <li>
+      Currently Logged in as : {{ user.firstname }}
+      </li>
+          <li>
+            <a href="{% url 'logout' %}">Logout</a>
+          </li>
+    </ul>
+      {% endblock %}

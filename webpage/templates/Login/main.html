@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    {% block title %}
+    {% endblock %}
+  </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <style type="text/css">
+  :root{
+    --boxbg: rgba(0, 0, 0, 0.2);
+    --bg: rgba(255, 255, 255,0.8);
+    --boxbgdark: rgba(0, 0, 0,0.5);
+    --bgdark: rgb(255, 255, 255);
+    --navblack: rgba(0, 0, 0,0.3);
+    --navwhite: rgba(255, 255, 255,0.3);
+    --navtextblack: black;
+    --navtextwhite: white;
+    --hoverlight:#696969;
+    --hoverdark:#42f5e9;
+    --bodydark:#041414;
+    --bodylight:#c3e3e3;
+    --txtwhite: white;
+    --txtblack: black;
+  }
+  a:hover{
+    color: var(--hoverdark);
+  }
+  .opacity-box{
+    background: var(--boxbg);
+  }
+  .opacity-box:hover{
+    background: var(--boxbgdark);
+  }
+  .dark-mode{
+    --boxbg: var(--bg);
+    --boxbgdark: var(--bgdark);
+    --navblack: var(--navwhite);
+    --navtextblack: var(--navtextwhite);
+    --navtextwhite: var(--navtextblack);
+    --hoverdark: var(--hoverlight);
+    --bodydark: var(--bodylight);
+    --txtblack: var(--txtwhite);
+  }
+  .see {
+    background-color: var(--txtblack);
+  }
+  #color {
+    background: var(--bodydark);
+  }
+  nav{
+    background: var(--navblack);
+    color: var(--navtextwhite);
+  }
+  a{
+  color: var(--navtextwhite);}
+  body {
+    overflow-y: scroll;
+    background-color: black;
+    color: white;
+  }
+  body::-webkit-scrollbar {
+      display: none;}
+
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
+
+  body.dark-mode {
+    background-color: white;
+    color: black;
+  }
+  @media (max-width: 1400px) {
+    .contain {
+      max-width: 900px;
+      margin: auto;
+    }
+    video {
+      width:80%;
+      padding-left:10%;
+      padding-right:10%;
+    }
+
+  }
+
+    @media (max-width: 899px) {
+      .contain {
+        max-width: 500px;
+        margin: auto;
+      }
+      video {
+        width:80%;
+        padding-left:10%;
+        padding-right:10%;
+      }
+    }
+
+
+
+  @media (min-width: 499px){
+    #betweencolor{
+      background-color: var(--txtblack);
+    }
+  }
+
+  .video-properties{
+    width:80%;
+    padding-left:10%;
+    padding-right:10%;
+  }
+
+    @media (max-width: 499px) {
+      .contain {
+        max-width: 90%;
+      }
+      video {
+        width:100%;
+        padding:0;
+      }
+      .video-properties {
+        width:100%;
+        padding:0;
+      }
+    }
+
+    @media (max-width: 499px) {
+  .svgsm{
+    width: 100%;
+    padding-right: 50%;
+  }
+  }
+
+  @media (max-width: 349px) {
+  .svgsm{
+  width: 100%;
+  padding-right:40%;
+  }
+  }
+  @media (max-width: 499px) {
+    h1{
+       font-size: 25px;
+  }
+       h4{
+          font-size: 20px;
+         }
+  h6{
+     font-size: 10px;
+    }
+  h5{
+  font-size: 15px;
+  }
+  }
+  @media (max-width: 349px) {
+    h1{
+       font-size: 19px;
+      }
+      h4{
+         font-size: 15px;
+        }
+  h6{
+     font-size: 9px;
+    }
+  h5{
+  font-size: 12px;
+  }
+  }
+  @media (max-width: 250px) {
+    h1{
+       font-size: 15px;
+      }
+      h4{
+         font-size: 11px;
+        }
+  h6{
+     font-size: 8px;
+    }
+  h5{
+  font-size: 9px;
+  }
+  }
+  .containtop {
+    max-width: 80%;
+    margin: auto;
+  }
+  .middle{
+    text-align: center;
+  }
+  .column-sm{
+    float:left;
+    width: 33.33333%;
+  }
+  @media (max-width: 393px){
+  .column-sm{
+    width:100%;
+  }
+  }
+  @media (min-width: 770px){
+  .boarder-solid{
+    border-style: none solid none none;
+  }
+  }
+  @media (max-width: 770px){
+  .boarder-solid{
+    border-style: none none solid none;
+  }
+  }
+
+  @media (min-width: 240px){
+    .see{
+      padding:7px;
+  }
+  @media (max-width: 410px){
+  .top{
+    display:none;
+  }
+  }
+  @media (min-width: 393px){
+  .mid{
+    text-align:center;
+  }
+  }
+  .colleft{
+    float: left;
+  }
+  .colright{
+    float: right;
+  }
+  .bound-b{
+      border-style: solid none solid none;
+    }
+  }
+  @media (max-width: 520px){
+    .colleft{
+      float: none;
+      text-align: center;
+              padding:20px;
+    }
+    .colright{
+      float: none;
+          text-align: center;
+          padding-top: 50px;
+
+    }
+
+  }
+  @media (min-width: 520px){
+    .colleft{
+     padding-left:20px;
+     padding-right:20px;
+    }
+
+  }
+
+  @media (min-width: 520px){
+    .bound-d{
+    border-style: none solid none none;
+    }
+  }
+  @media (max-width: 520px){
+    .bound-d{
+    border-style: none none solid none;
+    }
+  }
+  </style>
+  <body>
+    {% block body %}
+    {% endblock %}
+  </body>
+  </html>
